@@ -11,6 +11,31 @@
 				"type": "constructor"
 			},
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "bidder",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "actionFor",
+						"type": "string"
+					}
+				],
+				"name": "bidInfo",
+				"type": "event"
+			},
+			{
 				"inputs": [],
 				"name": "Auctioneer",
 				"outputs": [
@@ -83,6 +108,37 @@
 			{
 				"inputs": [
 					{
+						"internalType": "string",
+						"name": "auctionName",
+						"type": "string"
+					}
+				],
+				"name": "bidding",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "AuctionName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_deadline",
+						"type": "uint256"
+					}
+				],
+				"name": "createAuction",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "address",
 						"name": "user",
 						"type": "address"
@@ -100,21 +156,29 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
+				"inputs": [],
+				"name": "highestBidder",
+				"outputs": [
 					{
-						"internalType": "string",
-						"name": "AuctionName",
-						"type": "string"
-					},
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "hightestBid",
+				"outputs": [
 					{
 						"internalType": "uint256",
-						"name": "_deadline",
+						"name": "",
 						"type": "uint256"
 					}
 				],
-				"name": "initialize",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -131,7 +195,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"KAMIL SIR/PROJECT03/AUCTION-CONTRACT/Auction-Contract.sol": "Auction"
+			"KAMIL SIR/PROJECT03/contracts/Auction-Contract.sol": "Auction"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -145,12 +209,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"KAMIL SIR/PROJECT03/AUCTION-CONTRACT/Auction-Contract.sol": {
-			"keccak256": "0xf375b94a677843ce8de084e1b07d0b36082f3963d7ef8d30b31b797a566d0ceb",
+		"KAMIL SIR/PROJECT03/contracts/Auction-Contract.sol": {
+			"keccak256": "0x3cc2f7e2bf234dd3a8cb8f636458c844cf3dce0c987bb13c707d825de4af0ae0",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://3ecbc8e2f5739cc9e74c2fcab85f29277b5c1cd61a0c26223694e01b884a4084",
-				"dweb:/ipfs/QmZv7hcqjZ1QeA6g5fiKk14LhMpXUPTTTKVaHpn3s6cWxS"
+				"bzz-raw://b565812d73a9c268383b8e9e66b4151f9014c37227e9674311e5cf69eabe1793",
+				"dweb:/ipfs/QmXEcYVCZWLGA7LBkpq3uDNkhhDs7G2aQPtpLgsogopWpj"
 			]
 		}
 	},
